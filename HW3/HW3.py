@@ -42,6 +42,7 @@ while True:
             count=0
         if(len(game)==0):
             print("tebrikler oyunu kazandın")
+            print("Bulduğunuz kelime:",words)
             break
 
 

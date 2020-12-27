@@ -60,11 +60,8 @@ name_surname_control=True
 obje=s_s_s(name,surname)
 print("Öğrenci Girişini Yapın Lütfen")
 for control in range(0,3):
-    
     name=input("Lütfen Adınızı Giriniz:")
     surname=input("Lütfen soyadınızı giriniz:")
-    
-    print(control)
     if((obje.name==name and obje.surname==surname)):
         print("Giriş Yapıldı")
         name_surname_control=True

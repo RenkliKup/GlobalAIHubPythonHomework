@@ -54,44 +54,44 @@ case={
 print("Öğrenci Kaydınızı Yapın Lütfen")
 name=input("Lütfen Adınızı Giriniz:")
 surname=input("Lütfen soyadınızı giriniz:")
-baris=s_s_s(name,surname)
+obje=s_s_s(name,surname)
 print("Öğrenci Kaydınız Başarılı.")
 kontrol=True
 while kontrol:
-    print(f"Merhaba {baris.name} {baris.surname}")
+    print(f"Merhaba {obje.name} {obje.surname}")
     for x in case.values():
         if x in "Yanlış Tuş Girişi":
             pass
         else:
             print(x)
-    bar=int(input("please enter someone:"))
+    switch=int(input("please enter someone:"))
    
-    if bar==1:
-        if(baris.count>0):
-            yeniad=input(f"{baris.count} defa adınızı ve soyadınızı değiştirebilirsiniz Yeni Ad Giriniz:")
-            yeniSoyad=input(f"{baris.count} defa adınızı ve soyadınızı değiştirebilirsiniz Yeni Soyad Giriniz:")
-            baris.adDegistir(yeniad,yeniSoyad)
-            print(f"Adınız ve soyadınız {baris.name} {baris.surname} olarak değiştirildi")
+    if switch==1:
+        if(obje.count>0):
+            yeniad=input(f"{obje.count} defa adınızı ve soyadınızı değiştirebilirsiniz Yeni Ad Giriniz:")
+            yeniSoyad=input(f"{obje.count} defa adınızı ve soyadınızı değiştirebilirsiniz Yeni Soyad Giriniz:")
+            obje.adDegistir(yeniad,yeniSoyad)
+            print(f"Adınız ve soyadınız {obje.name} {obje.surname} olarak değiştirildi")
         else:
             print("Hakkınız bitti")
-    elif bar==2:
-        if(baris.dersSayisi>5):
+    elif switch==2:
+        if(obje.dersSayisi>5):
             print("Daha Fazla Ders Giremezsiniz")
         else:
             dersAdi=input("Ders Adını Giriniz:")
             vize=int(input("Vize Notunu Girniz:"))
             final=int(input("Final Notunu Girniz:"))
             proje=int(input("Proje Notunu Giriniz:"))
-            baris.dersTanimla(dersAdi,vize,final,proje)
+            obje.dersTanimla(dersAdi,vize,final,proje)
             print("Ders Kaydınız Başarılı")
-    elif bar==3:
-        if(baris.dersSayisi>2):
-              baris.dersNotHesapla()
+    elif switch==3:
+        if(obje.dersSayisi>2):
+              obje.dersNotHesapla()
         else:
-            print(f"Ders sayınız en az 3 olmalı. sizin ders sayınız: {baris.dersSayisi}")
-    elif bar==4:
-        if(baris.dersSayisi>0):
-            baris.dersKayiKeys()
+            print(f"Ders sayınız en az 3 olmalı. sizin ders sayınız: {obje.dersSayisi}")
+    elif switch==4:
+        if(obje.dersSayisi>0):
+            obje.dersKayiKeys()
         else:
             print("Dersiniz Yok Lütfen ders ekleyin")
     else:
